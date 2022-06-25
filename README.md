@@ -1,7 +1,7 @@
 # Voice Changer based on ATtiny412
 The ATtiny412 VoiceChanger is a simple device for changing the pitch of speech and other audio signals. An electret microphone is installed for audio input, and a small loudspeaker can be connected directly to the board for output.
 
-- Design Files (EasyEDA): https://easyeda.com/wagiminator/
+- Design Files (EasyEDA): https://easyeda.com/wagiminator/attiny412-voice-changer
 
 ![pic1.jpg](https://raw.githubusercontent.com/wagiminator/ATtiny412-VoiceChanger/main/documentation/VoiceChanger_pic1.jpg)
 
@@ -123,7 +123,7 @@ ISR(TCB0_INT_vect) {
 - Go to **Tools -> Burn Bootloader** to burn the fuses.
 - Open the sketch and click **Upload**.
 
-###If using the makefile (Linux/Mac)
+### If using the makefile (Linux/Mac)
 - Connect your [programmer](https://github.com/wagiminator/AVR-Programmer) (jtag2updi or SerialUPDI) to your PC and to the UPDI header on the board.
 - Download [AVR 8-bit Toolchain](https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers) and extract the sub-folders (avr, bin, include, ...) to /software/tools/avr-gcc. To do this, you have to register for free with Microchip on the download site.
 - Open the makefile and set the programmer and port (default is serialupdi on /dev/ttyUSB0).
