@@ -83,8 +83,8 @@ enum {PA0, PA1, PA2, PA3, PA4, PA5, PA6, PA7};      // enumerate pin designators
 // ===================================================================================
 
 #define BUF_LEN       192                       // buffer length
-uint8_t BUF_buffer[BUF_LEN];                    // this is the buffer
-uint8_t BUF_head, BUF_tail;                     // head and tail pointer
+volatile uint8_t BUF_buffer[BUF_LEN];           // this is the buffer
+volatile uint8_t BUF_head, BUF_tail;            // head and tail pointer
 
 // Push byte to ring buffer
 void BUF_push(uint8_t data) {

@@ -24,8 +24,8 @@ The amplified input signal is sampled by the ATtiny's ADC. For this purpose, the
 // ===================================================================================
 
 #define BUF_LEN       192                       // buffer length
-uint8_t BUF_buffer[BUF_LEN];                    // this is the buffer
-uint8_t BUF_head, BUF_tail;                     // head and tail pointer
+volatile uint8_t BUF_buffer[BUF_LEN];           // this is the buffer
+volatile uint8_t BUF_head, BUF_tail;            // head and tail pointer
 
 // Push byte to ring buffer
 void BUF_push(uint8_t data) {
