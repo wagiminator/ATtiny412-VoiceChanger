@@ -125,11 +125,10 @@ ISR(TCB0_INT_vect) {
 
 ### If using the makefile (Linux/Mac)
 - Connect your [programmer](https://github.com/wagiminator/AVR-Programmer) (jtag2updi or SerialUPDI) to your PC and to the UPDI header on the board.
-- Download [AVR 8-bit Toolchain](https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers) and extract the sub-folders (avr, bin, include, ...) to /software/tools/avr-gcc. To do this, you have to register for free with Microchip on the download site.
-- Open the makefile and set the programmer and port (default is serialupdi on /dev/ttyUSB0).
+- Make sure you have installed the latest [avr-gcc toolchain](http://maxembedded.com/2015/06/setting-up-avr-gcc-toolchain-on-linux-and-mac-os-x/).
 - Open a terminal.
 - Navigate to the folder with the makefile and the sketch.
-- Run `make install` to compile, burn the fuses and upload the firmware.
+- Run `PROGRMR=serialupdi PORT=/dev/ttyUSB0 make install` to compile, burn the fuses and upload the firmware (change PROGRMR and PORT accordingly).
 
 # Operating Instructions
 1. Connect a 5V power supply to the respective header on the board. Pay attention to the correct polarity!
